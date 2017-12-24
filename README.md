@@ -59,6 +59,7 @@ or
 ```
 	cp busybox_config.malinbay busybox/.config
 ```
+Note: in busybox_config.malinbay mdev command enabled
 
 * Don't forget override "SKIP_STRIP = y" in <Makefile.flags> file for overcoming "stripping error".
 ```
