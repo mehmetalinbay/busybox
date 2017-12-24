@@ -1,6 +1,13 @@
 Prerequisites
 =========
 Please read [Default Setup](https://github.com/mehmetalinbay/uclinux/blob/master/default_setup_README.md)
+
+Download Filesystem Files
+=========
+```
+	cd ~/workspace
+	git clone https://github.com/vf-tech/filesys.git
+```
  
 Download BusyBox
 =========
