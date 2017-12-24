@@ -72,7 +72,7 @@ Creating RootFS
 =========
 * create folder "romfs" in filesys directory and put RootFS files in it
 ```
-	cd filesys
+	cd ~/workspace/filesys
 	mkdir romfs
 	cp -af busybox/_install/* romfs
 	cp -af rootfs/* romfs
