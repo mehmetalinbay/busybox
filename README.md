@@ -1,9 +1,9 @@
 Folder Structure
 =========
-* workspace
-- uclinux
-- filesys
-- toolchain
+* /workspace
+  - uclinux
+  - filesys
+  - toolchain
 
 ```
 	cd home/$USER
@@ -45,6 +45,7 @@ Setup Toolchain
 Download BusyBox
 =========
 ```
+	cd ~/workspace/filesys
 	wget -c http://busybox.net/downloads/busybox-1.22.0.tar.bz2
 	tar -jxf busybox-1.22.0.tar.bz2
 	ln -s busybox-1.22.0 busybox
@@ -80,11 +81,12 @@ Creating RootFS
 * Edit romfs/etc/inittab, 
 * change ttyS2 to ttyS0 --> ttyS0::respawn:/bin/login -f root
 
+
+* Install [genromfs](http://romfs.sourceforge.net/)
+```
+	sudo apt-get install genromfs
+```
 * Then execute "genromfs -v -V "ROM Disk" -f romfs.bin -d <your_compiled_busybox_files> 2> romfs.map". It produces your romfs.bin file.
-* [genromfs](http://romfs.sourceforge.net/)
-```
-    sudo apt-get install genromfs
-```
 ```
 	genromfs -v -V "ROM Disk" -f romfs.bin -x placeholder -d romfs 2> romfs.map
 ```
