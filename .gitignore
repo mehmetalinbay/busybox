@@ -1,0 +1,38 @@
+#
+# NOTE! Don't add files that are generated in specific
+# subdirectories here. Add them in the ".gitignore" file
+# in that subdirectory instead.
+#
+# Normal rules
+#
+
+*.rej
+*.orig
+*.a
+*.o
+*~
+*.swp
+*.patch
+*.bin
+*.map
+
+#
+# Top-level generic files
+#
+
+/busybox
+/busybox*
+/romfs
+
+
+#
+# Generated files
+#
+
+*.depend
+/LOG
+/errlog
+/reloc_off
+
+# gdb files
+.gdb_history
