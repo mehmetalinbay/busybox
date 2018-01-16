@@ -58,3 +58,26 @@ Creating RootFS
 ```
 	genromfs -v -V "ROM Disk" -f romfs.bin -x placeholder -d romfs 2> romfs.map
 ```
+
+Application Development
+=========
+```
+	cd ~/workspace/filesys/app
+	arm-uclinuxeabi-gcc -o spi_test spi_test.c -mcpu=cortex-m3 -mthumb
+	cp spi_test /workspace/filesys/romfs/usr/
+```
+
+Then run genromfs, create new romfs.bin & download. 
+In uClinux console
+
+```
+	/usr/spi_test spidev4.0
+```
+
+Console output
+
+```
+	response(2): d4 
+```
+
+0xD4 is the WHO_AM_I register of GYRO IC.
